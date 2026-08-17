@@ -141,7 +141,7 @@ a {
 
 .list {
     list-style: none;
-    padding-left: 0;
+    padding-left: 3rem;
 }
 
 .list--inline .list__item {
@@ -210,7 +210,7 @@ a {
     font-weight: 600;
     margin: 1rem 0 ;
     outline: 0;
-    padding: 2rem 3rem;
+    padding: 2rem 3vw;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
@@ -301,6 +301,7 @@ a {
     border: 0;
     flex-grow: 1;
     padding: 1.5rem 2rem;
+    width: 0;
 }
 
 .input-group .btn {
@@ -536,6 +537,10 @@ a {
 .callout {
     padding: 4rem;
     border-radius: 5px;
+    margin: auto auto;
+    width: 90%;
+    position:relative;
+    z-index: 2;
 }
 
 .callout--primary {
@@ -607,7 +612,7 @@ a {
 
 /* Blocks */
 .block {
-    --padding-vertival: 6rem;
+
     padding: var(--padding-vertival) 2rem;
 
 }
@@ -618,7 +623,7 @@ a {
 }
 
 .block__heading {
-    margin-top: 0;
+    margin: 10rem 5rem 0;
 }
 
 .block--dark {
@@ -703,7 +708,7 @@ a {
         width: auto;
         display: flex;
         font-size: 1.6rem;
-        max-height: 100%;
+        max-height: none;
         opacity: 1;
     }
 
@@ -745,8 +750,9 @@ a {
 }
 
 .block-domain__prices {
+    color: var(colo);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 6rem);
     font-size: 2rem;
     font-weight: 600;
@@ -773,8 +779,8 @@ a {
 
 /* Features */
 .feature {
-    gap: 4rem 2rem;
-    margin: 12rem 0;
+    gap: 5rem 2rem;
+    margin: 4rem ;
 }
 
 .feature:first-of-type {
@@ -800,14 +806,19 @@ a {
     width: 100%;
 }
 
+.block-showcase {
+    padding-bottom: 10rem;
+}
+
 @media screen and (min-width: 768px) {
-.block-showcase .grid {
-    grid-template-columns: 50% 50%;
+    .block-showcase .grid {
+         grid-template-columns: 50% 50%;
 }
 
     .block-showcase__image {
         justify-self: end;
     }
+
     .block-showcase__image > img {
         width: auto;
         max-width: 700px;
@@ -817,6 +828,8 @@ a {
 .footer {
     background: #232323;
     transition: color 0.3s;
+    margin-top: -200px;
+    padding-top: 250px;
 }
 
 .footer a {
